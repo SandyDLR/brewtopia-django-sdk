@@ -37,6 +37,20 @@ https://www.tooplate.com/view/2126-antique-cafe
                     <li class="inline-block mb-4 mx-4"><a href="#menu" class="tm-text-gold py-1 md:py-3 px-4">Menu</a></li>
                     <li class="inline-block mb-4 mx-4"><a href="#about" class="tm-text-gold py-1 md:py-3 px-4">About</a></li>
                     <li class="inline-block mb-4 mx-4"><a href="#contact" class="tm-text-gold py-1 md:py-3 px-4">Contact</a></li>
+                    <li>
+                        <form action="" method="post">{% csrf_token %}
+                            <input name="next" type="hidden" value="{{ request.path }}" />
+                            <div class="text-center" width="100%">
+                                <select name="language">
+                                    <option value="Spanish">Spanish</option>
+                                    <option value="English">English</option>
+                                    <option value="German">German</option>
+                                    <option value="Greek">Greek</option>
+                                </select>
+                                <input type="submit" value="Go" />
+                            </div>
+                        </form>
+                    </li>
                 </ul>
             </div>            
         </nav>
